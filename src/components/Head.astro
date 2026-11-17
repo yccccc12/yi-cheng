@@ -1,5 +1,6 @@
 ---
 import '@/styles/global.css';
+import Analytics from '@vercel/analytics/astro';
 import { SITE_DESCRIPTION, SITE_TITLE } from '@/consts';
 
 export interface Props {
@@ -52,4 +53,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 
   <!-- Twitter, falls back to Open Graph for the rest -->
   <meta name="twitter:card" content={image ? 'summary_large_image' : 'summary'} />
+
+  <!-- Analytics -->
+  <Analytics />
 </head>

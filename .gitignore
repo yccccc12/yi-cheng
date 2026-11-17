@@ -32,3 +32,5 @@ pnpm-debug.log*
 
 temp/
 AGENTS.md
+.vercel
+.env*.local

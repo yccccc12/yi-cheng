@@ -1,6 +1,6 @@
 export const SITE_TITLE = 'YC | Yi Cheng';
 export const SITE_DESCRIPTION = 'AI engineer: OCR, RAG and local LLM systems';
-export const SITE_URL = process.env.SITE_URL || 'https://example.com';
+export const SITE_URL = process.env.SITE_URL || 'https://yi-cheng.vercel.app';
 
 export const PORTRAIT: { light: string; dark?: string } | undefined = {
   light: '/portrait-color.webp',
