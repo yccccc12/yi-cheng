@@ -1,0 +1,30 @@
+---
+import { Content } from '@/content/intro.mdx';
+---
+
+<section>
+  <Content />
+</section>
+
+<script>
+  // Born 2004-10-12 (Malaysia time, UTC+8)
+  const BIRTH = Date.parse('2004-10-12T00:00:00+08:00');
+  const YEAR = 365.2425 * 24 * 60 * 60 * 1000;
+  const els = document.querySelectorAll<HTMLElement>('[data-age]');
+  const update = () => {
+    const age = ((Date.now() - BIRTH) / YEAR).toFixed(9);
+    els.forEach((el) => (el.textContent = age));
+  };
+  update();
+  setInterval(update, 50);
+</script>
+
+<style>
+  section {
+    margin-bottom: 3em;
+  }
+
+  section :global(p) {
+    margin-bottom: 1em;
+  }
+</style>

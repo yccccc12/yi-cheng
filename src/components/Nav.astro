@@ -1,0 +1,39 @@
+---
+const links = [
+  { label: 'About', href: '/' },
+  { label: 'Work', href: '/work/' },
+  { label: 'Writings', href: '/notes/' },
+];
+
+const path = Astro.url.pathname;
+const isActive = (href: string) => (href === '/' ? path === '/' : path.startsWith(href));
+---
+
+<nav>
+  {links.map(({ label, href }) => (
+    <a href={href} class:list={{ active: isActive(href) }} aria-current={isActive(href) ? 'page' : undefined}>{label}</a>
+  ))}
+</nav>
+
+<style>
+  nav {
+    display: flex;
+    gap: 2ch;
+    margin-top: 1.5em;
+    padding-bottom: 0.5em;
+
+    border-bottom: 1px solid var(--theme-sub-text);
+  }
+
+  a {
+    color: var(--theme-sub-text);
+    text-decoration: none;
+  }
+
+  a.active {
+    color: var(--theme-text);
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 6px;
+  }
+</style>

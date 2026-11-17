@@ -1,0 +1,13 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+
+import NoteHeader from '@/components/NoteHeader.astro';
+import Intro from '@/components/Intro.astro';
+import { SITE_TITLE } from '@/consts';
+---
+
+<BaseLayout title={SITE_TITLE} headProps={{ image: '/og/index.png' }}>
+  <NoteHeader title='About' />
+  <Intro />
+
+</BaseLayout>

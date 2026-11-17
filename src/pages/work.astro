@@ -1,0 +1,79 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import NoteHeader from '@/components/NoteHeader.astro';
+---
+
+<BaseLayout headProps={{ title: 'Work' }}>
+  <NoteHeader title='Work' />
+
+  <h2>[ Experience ]</h2>
+  <ul>
+    <li>
+      <strong>Student Research Assistant</strong>, Universiti Tunku Abdul Rahman
+      <span>May 2026 – Present</span>
+    </li>
+    <li>
+      <strong>AI Intern</strong>, Quantadics Sdn Bhd
+      <span>Oct 2025 – Jan 2026</span>
+    </li>
+  </ul>
+
+  <h2>[ Education ]</h2>
+  <ul>
+    <li>
+      <strong>BSc (Hons) Applied Mathematics with Computing</strong>, Universiti Tunku Abdul Rahman
+      <span>Oct 2023 – Oct 2026 · First Class Honours</span>
+    </li>
+  </ul>
+
+  <h2>[ Hackathons & Competitions ]</h2>
+  <ul>
+    <li>
+      <strong>Top 10 (Blockchain for Good Alliance, BGA track)</strong>, Nottshack 2026
+      <span>Apr 2026</span>
+    </li>
+    <li>
+      <strong>Second Runner Up</strong>, Chin Hin AI Hackathon 2026
+      <span>Mar 2026</span>
+    </li>
+    <li>
+      <strong>Second Place (TiDB track)</strong>, Cursor AI Hackathon 2025
+      <span>Dec 2025</span>
+    </li>
+    <li>
+      <strong>Participant</strong>, KitaHack 2025
+      <span>Apr 2025</span>
+    </li>
+    <li>
+      <strong>Participant</strong>, 2025 EY Open Science AI & Data Challenge
+      <span>Mar 2025</span>
+    </li>
+  </ul>
+</BaseLayout>
+
+<style>
+  h2 {
+    margin: 2em 0 1em;
+
+    color: var(--theme-sub-text);
+
+    font-size: 1em;
+    font-weight: 400;
+  }
+
+  ul {
+    display: grid;
+    gap: 0.5em;
+    padding: 0;
+    list-style: none;
+  }
+
+  strong {
+    font-weight: 700;
+  }
+
+  span {
+    display: block;
+    color: var(--theme-sub-text);
+  }
+</style>
